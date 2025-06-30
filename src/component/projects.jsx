@@ -1,17 +1,38 @@
 import '../assets/css/projects.scss'
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, color } from 'framer-motion';
 import casinoPreview from '../assets/images/casino-preview.jpg';
 import eyecarePreview from '../assets/images/eyecare-preview.jpg';
 import aestheticPreview from '../assets/images/casino-preview.jpg';
 import othersPreview from '../assets/images/casino-preview.jpg';
-const projects = [
-  { title: 'Casino Websites', color: 'bg-stone-650', image: casinoPreview, colSpan: 'row-span-2 col-start-2' },
-  { title: 'Eyecare', color: 'bg-stone-800', image: eyecarePreview, colSpan: 'col-span-2 row-span-3 col-start-3' },
-  { title: 'Aesthetics', color: 'bg-stone-700', image: casinoPreview, colSpan: 'col-span-2 row-span-3 row-start-3' },
-  { title: 'International Aid', color: 'bg-stone-600', image: casinoPreview , colSpan: 'row-span-2 col-start-3 row-start-4' },
-];
+import React, { useState } from 'react';
+import Aesthetics from './projects/aesthetics';
 
+
+// const projects = [
+//   { title: 'Casino Websites', color: 'bg-stone-650', image: casinoPreview, colSpan: 'row-span-2 col-start-2' },
+//   { title: 'Eyecare', color: 'bg-stone-800', image: eyecarePreview, colSpan: 'col-span-2 row-span-3 col-start-3' },
+//   { title: 'Aesthetics', color: 'bg-stone-700', image: casinoPreview, colSpan: 'col-span-2 row-span-3 row-start-3' },
+//   { title: 'Others', color: 'bg-stone-600', image: casinoPreview , colSpan: 'row-span-2 col-start-3 row-start-4' },
+// ];
+
+const projects = [
+    {
+        title: 'Casino', color: 'bg-stone-650', component: Aesthetics, colSpan: 'col-span-2 row-span-2 row-start-2 lg:col-span-1 lg:row-span-2 lg:col-start-2 lg:row-start-1'
+        
+    },
+     {
+        title: 'Casino', color: 'bg-stone-650', component: Aesthetics, colSpan: 'col-span-4 row-span-2 col-start-3 row-start-2 lg:col-span-2 lg:row-span-3 lg:col-start-3 lg:row-start-1'
+        
+    },
+     {
+        title: 'Casino', color: 'bg-stone-650', component: Aesthetics, colSpan: 'col-span-4 row-span-2 row-start-4 lg:col-span-2 lg:row-span-3 lg:col-start-1 lg:row-start-3'
+        
+    },
+     {
+        title: 'Casino', color: 'bg-stone-650', component: Aesthetics, colSpan: 'col-span-2 row-span-2 col-start-5 row-start-4 lg:col-span-1 lg:row-span-2 lg:col-start-3 lg:row-start-4'
+        
+    }
+]
 function Project(){
     const [activeProject, setActiveProject] = useState(null);
 
@@ -20,12 +41,13 @@ function Project(){
         <section className='project-sec'>
             <svg width="800" height="250" className='proj-text'>
                 <text x="150" y="200">PROJECTS</text>
+               
             </svg>
             <div className='px-2'>
                 <div className="relative w-full min-h-screen  text-white overflow-hidden">
-                    <div className="grid grid-cols-4 grid-rows-5 gap-4 p-8 pt-30 pb-20 h-[90vh]">
-                        <div className='row-span-2 col-start-1 flex h-full place-items-center justify-center'>
-                            <motion.h2 className='proj-heading block text-center text-stone-900 dark:text-white text-5xl  font-bold mb-15'
+                    <div className="grid grid-cols-6 grid-rows-5 lg:grid-cols-4 lg:grid-rows-5 gap-4 p-8 pt-30 pb-20 h-[90vh]" >
+                        <div  className='col-span-6 lg:col-span-1 lg:row-span-2 lg:col-start-1 lg:row-start-1 flex h-full place-items-center justify-center'>
+                            <motion.h2 className='proj-heading block text-center text-stone-900 dark:text-white text-5xl  font-bold lg:mb-15'
                                 initial={{y:-110, opacity: 0}}
                                 whileInView={{y: 0, opacity: 1}}
                                 transition={{duration: 0.4}}
@@ -37,13 +59,15 @@ function Project(){
                         <motion.div
                             key={index}
                             layout
-                            className={`overflow-hidden cursor-pointer mix-blend-luminosity relative p-4 ${project.color} ${project.colSpan}`}
+                            className={`overflow-hidden cursor-pointer mix-blend-luminosity relative p-0 ${project.color} ${project.colSpan}`}
                             onClick={() => setActiveProject(project)}
                             whileHover={{ scale: 1.01 }}
                         >
                            
-                            <h3 className="text-lg font-semibold z-3 relative">{project.title}</h3>
+                            {/* <h3 className="text-lg font-semibold z-3 relative">{project.title}</h3>
                             <img src={project.image} alt={project.title} className="w-full object-cover mb-2 absolute top-0 left-0 z-1" />
+                             */}
+                            {React.createElement(project.component)}
                         </motion.div>
                         ))}
                     </div>
