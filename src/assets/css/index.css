@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme inline {
+  --color-orange-500: #C85321;
+  --color-stone-900: #181818;
+  --color-stone-800:#1E1E1E;
+  --color-stone-700:#302F2F;
+  --color-stone-600:#575757;
+  --color-stone-650:#4E4947;
+  --font-sans: 'Montserrat', sans-serif;
+  --spacing-section: 4rem;
+}
+
+

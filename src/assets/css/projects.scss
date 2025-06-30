@@ -1,0 +1,51 @@
+.project-sec{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .proj-heading {
+         &::after{
+                content: "";
+                width: 30px;
+                height: 30px;
+                background-color: var(--bt-orange);
+                display: inline-block;
+                margin-left: 15px;
+            }
+    }
+}
+
+.proj-text{
+        position: absolute;
+        top: -80px;
+        opacity: 0.4;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: flex-end;
+        svg{
+           width: 1268px;
+
+        }
+        text{ 
+            stroke:#C85321;
+            stroke-width: 2;
+            fill: none;
+            text-align: right;
+            letter-spacing: 24px;
+            font-weight: 900;
+            font-size: 257px;
+            font-family: sans-serif;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+             transform: translateX(100%);
+            animation: fadeInRight 1s forwards,  draw 3.5s  1.5s infinite;
+        }
+        @media screen and (max-width: 500px) {
+          right: initial;
+          left: 0;
+          width: 100%;
+          bottom: 0;
+        }
+   }

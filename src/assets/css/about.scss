@@ -1,0 +1,42 @@
+:root{
+    --bt-orange:#C85321;
+}
+.about-sec{
+    padding: 50px 0;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    .about-me-details{
+        p{
+            line-height: 2em;
+        }
+        .about-title{
+            // display: flex;
+            // align-items: center;
+            // flex-direction: flex-row;
+            // gap: 10px;
+            &::after{
+                content: "";
+                width: 30px;
+                height: 30px;
+                background-color: var(--bt-orange);
+                display: inline-block;
+                margin-left: 15px;
+            }
+            
+        }
+        svg {
+                position: absolute;
+                max-width: 700px;
+                top: 106px;
+                right: 0;
+
+
+                text {
+                    fill: #c85321;
+                }
+            }
+    }
+    
+    
+}
