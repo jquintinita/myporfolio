@@ -19,13 +19,14 @@ function App() {
 
 
   return (
-    <div className=' bg-zinc-100 dark:bg-stone-900 scroll-smooth'>
+    <div className=' bg-zinc-100 dark:bg-stone-900 '>
      {
        loading ?  <Loading/> : (
         <main>
           <Hero/>
           <Webstack/>
           <About/>
+          
           <Project></Project>
           <WorkExperience/>
         </main>

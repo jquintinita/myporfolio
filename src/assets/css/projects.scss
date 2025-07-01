@@ -54,7 +54,7 @@
    }
 
 .proj-tile{
-    mix-blend-mode: luminosity;
+    filter: grayscale(1);
     transition: all 600ms ease-in;
     overflow: hidden;
     .overlay{
@@ -64,7 +64,7 @@
         z-index: 999;
     }
     &:hover{
-         mix-blend-mode: normal;
+         filter: grayscale(0);
          .overlay{
             animation: hoveProj 500ms forwards 100ms ;
          }

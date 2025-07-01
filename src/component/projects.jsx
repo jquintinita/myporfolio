@@ -66,11 +66,11 @@ function Project(){
 
     return(
         <section className='project-sec'>
-            <svg width="800" height="250" className='proj-text'>
+            <svg width="800" height="250" className='proj-text z-0'>
                 <text x="150" y="200">PROJECTS</text>
                
             </svg>
-            <div className='px-2'>
+            <div className='px-2 relative z-30'>
                 <div className="relative w-full min-h-screen  text-white overflow-hidden">
                     <div className="grid grid-cols-6 grid-rows-5 lg:grid-cols-4 lg:grid-rows-5 gap-4 p-8 pt-30 pb-20 h-[100vh] md:h-[90vh]" >
                         <div  className='col-span-6 lg:col-span-1 lg:row-span-2 lg:col-start-1 lg:row-start-1 flex h-full place-items-center justify-center'>
