@@ -1,0 +1,16 @@
+.proj-aesthetics{
+    img{
+        transition: all 300ms ease-in;
+    }
+    &:hover{
+        .bg-image{
+            transform: scale(1.05);
+        }
+        .phone1{
+            transform: translateY(20px) !important;
+        }
+        .phone2{
+            transform: translateY(50px) !important;
+        }
+    }
+}

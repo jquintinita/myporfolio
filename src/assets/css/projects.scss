@@ -1,3 +1,6 @@
+:root{
+    --topPostion: 0px;
+}
 .project-sec{
     position: relative;
     overflow: hidden;
@@ -49,3 +52,121 @@
           bottom: 0;
         }
    }
+
+.proj-tile{
+    mix-blend-mode: luminosity;
+    transition: all 600ms ease-in;
+    .overlay{
+        background-color: #C85321;
+        transition: all 200ms ease-in;
+        top: 100%;
+        z-index: 999;
+    }
+    &:hover{
+         mix-blend-mode: normal;
+         .overlay{
+            animation: hoveProj 500ms forwards 100ms ;
+         }
+    }
+}
+
+.proj-eyecare{
+    .screenshot{
+        width: 77%;
+        left: 11.5%;
+        top: 10%;
+        height: 98%;
+        object-fit: cover;
+        object-position: 0 0;
+         @media screen and (max-width: 884px) {
+            top: 8%;
+        }
+    }
+   
+    &:hover{
+        .screenshot{
+            animation: scrollScreen 10s forwards 200ms infinite;
+        }
+       
+    }
+}
+
+@keyframes scrollScreen {
+    0%{
+         object-position: 0 0;
+    }
+    50%{
+         object-position: 0% 100%;
+    }
+    100%{
+        object-position: 0 0;
+    }
+}
+
+/*CASINO*/
+
+.proj-Casino{
+    img{
+        transition: all 300ms ease-in;
+    }
+    &:hover{
+        .bg-image{
+            transform: scale(1.05);
+        }
+        .ball{
+            animation: levitate 1s forwards 200ms infinite;
+        }
+        .clover{
+           animation: levitate 1.2s forwards 220ms infinite;
+        }
+         .heart{
+           animation: levitate 1.3s forwards 240ms infinite;
+        }
+    }
+}
+
+@keyframes hoveProj {
+    50%{
+        top: 200%;
+        background-color: transparent;
+    }
+     70%{
+        top: 30%;
+        background-color: #c853217c;
+    }
+     80%{
+        top: 20%;
+        background-color: #c853217c;
+    }
+    100%{
+         top: 0;
+        background-color: #c853217c;
+    }
+}
+
+
+
+
+@keyframes levitate {
+	0% {
+		transform: translateY(calc(var(--topPostion)));
+	}
+	50% {
+		transform: translateY(calc(var(--topPostion) + 15px));
+	}
+	100% {
+		transform: translateY(calc(var(--topPostion)));
+	}
+}
+
+@keyframes surprise {
+	0% {
+		transform: translateY(calc(var(--topPostion)));
+	}
+	50% {
+		transform: translateY(calc(var(--topPostion) + 15px));
+	}
+	100% {
+		transform: translateY(calc(var(--topPostion)));
+	}
+}
