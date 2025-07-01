@@ -1,8 +1,6 @@
 import '../assets/css/projects.scss'
 import { motion, AnimatePresence, color } from 'framer-motion';
-import casinoPreview from '../assets/images/casino-preview.jpg';
-import eyecarePreview from '../assets/images/eyecare-preview.jpg';
-import aestheticPreview from '../assets/images/casino-preview.jpg';
+
 import othersPreview from '../assets/images/casino-preview.jpg';
 import React, { useState } from 'react';
 import Aesthetics from './projects/aesthetics';

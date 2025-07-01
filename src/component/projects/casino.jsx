@@ -4,7 +4,7 @@ import clover from '../../assets/images/clover-floating.png'
 import heart from '../../assets/images/heart-floating.png'
 import CasinoTitle from '../../assets/images/Casino.svg'
 import '../../assets/css/aesthetics.scss'
-import { motion, AnimatePresence, color, scale } from 'framer-motion';
+
 
 function Casino(){
     return(

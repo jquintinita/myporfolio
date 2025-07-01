@@ -3,7 +3,7 @@ import phone1 from '../../assets/images/phone1.png'
 import phone2 from '../../assets/images/phone2.png'
 import aestheticTitle from '../../assets/images/Aesthetics-text.svg'
 import '../../assets/css/aesthetics.scss'
-import { motion, AnimatePresence, color, scale } from 'framer-motion';
+
 
 function Aesthetics(){
     return(

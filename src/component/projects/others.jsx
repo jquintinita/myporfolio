@@ -1,5 +1,5 @@
 
-import { motion, AnimatePresence, color, scale } from 'framer-motion';
+
 
 function Others(){
     return(

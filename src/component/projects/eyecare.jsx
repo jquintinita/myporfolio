@@ -2,7 +2,7 @@ import macBook from '../../assets/images/mac-book.png'
 import screenShot from '../../assets/images/premier-eyecare-associate.png'
 import EyecareTitle from '../../assets/images/Eyecare.svg'
 import '../../assets/css/aesthetics.scss'
-import { motion, AnimatePresence, color, scale } from 'framer-motion';
+
 
 function Eyecare(){
     return(
