@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import '../assets/css/work-experience.scss';
-import { motion } from 'framer-motion';
+import AOS from 'aos';
+
+AOS.init({
+    useClassNames: true,
+    initClassName: false,
+    animatedClassName: 'animated',
+});
 
 
 const skillColors = {
@@ -88,19 +94,16 @@ function WorkExperience() {
     return (
         <div className="section work-experience px-4 md:px-5" id="work-experience">
             <div className='container px-4 md:px-5'>
-                <motion.h2 className='work-heading block text-center text-stone-900 dark:text-white text-5xl  font-bold mb-15'
-                    initial={{y:-110, opacity: 0}}
-                    whileInView={{y: 0, opacity: 1}}
-                    transition={{duration: 0.4}}
-                >
+                <h2 className='work-heading block text-center text-stone-900 dark:text-white text-5xl  font-bold mb-15' data-aos="fade-down"   data-aos-delay="400"
+                        data-aos-duration="760"
+                        data-aos-easing="ease-in">
                     My work experience
-                </motion.h2>
-                <motion.div className="row" 
-                    initial={{scale: 0.6, opacity: 0}}
-                    whileInView={{scale: 1, opacity: 1}}
-                    transition={{duration: 0.4, delay: 0.3}}>
+                </h2>
+                <div className="row">
                     
-                    <div className="work">
+                    <div className="work"  data-aos="zoom-in"   data-aos-delay="600"
+                        data-aos-duration="760"
+                        data-aos-easing="ease-in">
                         <div className="timeline">
                             <nav className="timeline__nav">
                                 <ul>
@@ -132,7 +135,7 @@ function WorkExperience() {
                             </div>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             
             </div>
              <svg width="800" height="250" className='exp-text'>

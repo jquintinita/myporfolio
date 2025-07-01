@@ -1,3 +1,33 @@
 .webstack-sec{
     padding: 50px 0;
+    .tech-stack-marque{
+        > div{
+            animation: tech-stack-marquee  linear infinite;
+            animation-duration: calc( 3s * 9);
+        }
+         &:hover{
+            
+            > div {
+                animation-play-state: paused;
+                animation-name: tech-stack-marquee;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+       
+    }
+}
+
+
+
+@keyframes tech-stack-marquee {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(calc(-50% - 16px), 0, 0);
+        transform: translate3d(calc(-50% - 16px), 0, 0);
+    }
 }

@@ -14,3 +14,37 @@
 }
 
 
+.draw path.letterj {
+        fill: none;
+        stroke: white;
+        stroke-width: 2;
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        animation: draw 2.5s ease infinite;
+        animation-delay: 0s;
+    }
+
+    .draw path.letterq {
+        fill: none;
+        stroke: white;
+        stroke-width: 2;
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        animation: draw 2.5s ease infinite;
+        animation-delay: 0.6s;
+    }
+
+
+
+    @keyframes draw {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes fillIn {
+        to {
+            fill: white;
+        }
+    }
+
