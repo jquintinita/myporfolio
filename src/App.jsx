@@ -32,11 +32,12 @@ function App() {
   }, []);
 
   useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
     AOS.init({
         useClassNames: true,
         initClassName: false,
         animatedClassName: 'animated',
-        offset: 400
+        offset: isMobile ? 50 : 350
     });
   },[])
 
