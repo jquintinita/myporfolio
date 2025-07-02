@@ -1,13 +1,13 @@
 import '../assets/css/contact.scss'
 function Contact(){
     return(
-        <div class="section download active px-4 md:px-8" id="download-cv">
+        <div class="section download active px-4 md:px-8 !pt-30 !-pb-20" id="contact">
             <div className='max-w-[1000px] download-cv relative z-30'>
-                <h2 data-aos="fade-left"  data-aos-delay="400"  data-aos-duration="500"  className='text-2xl md:text-4xl lg:text-8xl font-bold mb-8 text-white '>Looking for a driven and dedicated professional?</h2>
+                <h2 data-aos="fade-left"  data-aos-delay="400"  data-aos-duration="500"  className='text-3xl md:text-4xl lg:text-8xl mt-10 md:mt-0 font-bold mb-8 text-white '>Looking for a driven and dedicated professional?</h2>
                 <p data-aos="fade-left" data-aos-delay="450" data-aos-duration="500"  className='text-white text-lg'>Download my CV to learn more about my skills, experience, and accomplishments. I'm excited to bring my expertise to your team and help achieve your goals.</p>
                 <a href='https://drive.google.com/file/d/1pDJ3fQArfa181ysGv1KcQzKFcWfyACOK/view?usp=sharing' className='bg-orange-500 text-white rounded-full font-medium inline-block py-4 px-9 mt-5 ' data-aos="fade-up"  data-aos-delay="500"   >Download CV</a>
             </div>
-            <div className='w-[150px] right-30 top-100 md:w-[250px] lg:w-[400px] absolute lg:right-30 lg:top-40 z-0 opacity-10'  data-aos-delay="400"  data-aos-duration="500" >
+            <div className='w-[150px] right-30 top-100 md:w-[250px] lg:w-[400px] absolute lg:right-30 lg:top-40 z-0 opacity-10' data-aos="fade-up"  data-aos-delay="400"  data-aos-duration="500" >
                 <svg className="draw w-full h-auto" width="342" height="398" viewBox="0 0 342 398" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path className="letterj" d="M255 52.25L246 0.75H341.5V256.75H87V162.75H142V195.75H284.5V52.25H255Z"/>
                     <path  className="letterq" fill-rule="evenodd" clip-rule="evenodd" d="M0.5 342.75V90.75H256V342.75H203.5V397.25H153V342.75H0.5ZM51.5 146.75V298.25H153V269.25H203.5V146.75H51.5Z"/>

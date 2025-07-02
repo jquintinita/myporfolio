@@ -10,22 +10,30 @@ import Lenis from 'lenis'
 
 import AOS from 'aos';
 import Contact from './component/contact'
+import Header from './component/header'
 
 
 
 
 function App() {
  const [loading, setLoading] = useState(true);
-
+ const [lenis, setLenis] = useState(null)
   useEffect(() => {
-    const lenis = new Lenis({
-      autoRaf: true,
-    });
+   
+    const lenisInstance = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    })
 
-    // Listen for the scroll event and log the event data
-    lenis.on('scroll', (e) => {
-      console.log(e);
-    });
+    const raf = (time) => {
+      lenisInstance.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    setLenis(lenisInstance)
+
     // Simulate loading delay (e.g. fetching data or assets)
     const timer = setTimeout(() => setLoading(false), 2000);
     return () => clearTimeout(timer);
@@ -37,7 +45,7 @@ function App() {
         useClassNames: true,
         initClassName: false,
         animatedClassName: 'animated',
-        offset: isMobile ? 50 : 350
+        offset: isMobile ? 0 : 250
     });
   },[])
 
@@ -47,15 +55,18 @@ function App() {
     <div className=' bg-zinc-100 dark:bg-stone-900 scroll-smooth' id='smoothScroll'>
      {
        loading ?  <Loading/> : (
+        <>
+        <Header lenis={lenis} />
         <main>
-          <Hero/>
-          <Webstack/>
-          <About/>
-          
-          <Project></Project>
-          <WorkExperience/>
-          <Contact/>
+            <Hero/>
+            <Webstack/>
+            <About/>
+            
+            <Project></Project>
+            <WorkExperience/>
+            <Contact/>
         </main>
+        </>
        )
      }
      

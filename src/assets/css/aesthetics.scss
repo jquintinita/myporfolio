@@ -2,6 +2,9 @@
     img{
         transition: all 300ms ease-in;
     }
+    .bg-image{
+        animation: zoomIn 5s infinite 100ms ;
+    }
     &:hover{
         .bg-image{
             transform: scale(1.05);
@@ -12,5 +15,17 @@
         .phone2{
             transform: translateY(50px) !important;
         }
+    }
+}
+
+@keyframes zoomIn {
+    from{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    to{
+        transform: scale(1);
     }
 }

@@ -58,6 +58,7 @@
     filter: grayscale(1);
     transition: all 600ms ease-in;
     overflow: hidden;
+    position: relative;
     .overlay{
         background-color: #C85321;
         transition: all 200ms ease-in;
@@ -81,17 +82,27 @@
         object-fit: cover;
         object-position: 0 0;
         border-radius: 9px;
+         animation: scrollScreen 20s forwards 200ms infinite;
+         @media screen and (max-width: 1024px){
+            top: 4%;
+            height: 78%;
+         }
          @media screen and (max-width: 884px) {
-            top: 8%;
+            top: 3%;
+        }
+        @media screen and (max-width: 450px) {
+            top: 2%;
+            height: 100%;
         }
     }
    
     &:hover{
         .screenshot{
-            animation: scrollScreen 10s forwards 200ms infinite;
+            animation-duration: 15s;
         }
        
     }
+    
 }
 
 @keyframes scrollScreen {
@@ -111,6 +122,15 @@
 .proj-Casino{
     img{
         transition: all 300ms ease-in;
+    }
+    .ball{
+            animation: levitate 1s forwards 200ms infinite;
+    }
+    .clover{
+        animation: levitate 1.2s forwards 220ms infinite;
+    }
+        .heart{
+        animation: levitate 1.3s forwards 240ms infinite;
     }
     &:hover{
         .bg-image{

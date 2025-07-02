@@ -98,7 +98,7 @@ function WorkExperience() {
     return (
         <div className="section work-experience px-4 md:px-5" id="work-experience" ref={container}>
             <div className='container px-4 md:px-5'>
-                <h2 className='work-heading block text-center text-stone-900 dark:text-white text-5xl  font-bold mb-15' data-aos="fade-down"   data-aos-delay="300"
+                <h2 className='work-heading block text-center text-stone-900 dark:text-white text-4xl md:text-5xl font-bold mb-15' data-aos="fade-down"   data-aos-delay="300"
                         data-aos-duration="760"
                         data-aos-easing="ease-in">
                     My work experience

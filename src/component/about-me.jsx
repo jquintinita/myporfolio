@@ -7,7 +7,7 @@ function About(){
 
 
     return(
-        <section className="about-sec">
+        <section className="about-sec" id='about'>
             <div className='container mx-auto px-4 sm:px-4 md:px-8'>
                 <div className='flex flex-col lg:flex-row space-x-6 justify-between place-items-center'>
                     <div className='about-me-img flex-1' >
@@ -20,7 +20,7 @@ function About(){
                     <div className='about-me-details flex-1 relative '>
                          <CodingText  />
                        
-                        <h2 className='about-title text-stone-900 dark:text-white text-5xl font-bold mb-5' data-aos="fade-left"  data-aos-duration="800"  data-aos-delay="20" data-aos-easing="ease-in-out" >
+                        <h2 className='about-title text-stone-900 dark:text-white text-4xl md:text-5xl font-bold mb-5' data-aos="fade-left"  data-aos-duration="800"  data-aos-delay="20" data-aos-easing="ease-in-out" >
                             About me
                         </h2>
                        

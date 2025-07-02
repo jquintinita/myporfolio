@@ -12,7 +12,7 @@ function Webstack(){
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
-        // cssEase: "linear",
+        cssEase: "linear",
         speed: 3000,
         arrows: false,
         pauseOnHover: false,
@@ -43,7 +43,7 @@ function Webstack(){
 
      return(
        <section className="webstack-sec overflow-hidden">
-            {/* <Slider {...settings}>
+            <Slider {...settings}>
                 {webstack.map((tech, index) => (
                     <div key={index} className='text-center'>
                         <span className='dark:text-neutral-700 font-bold text-lg md:text-2xl lg:text-3xl  px-4'>
@@ -51,8 +51,8 @@ function Webstack(){
                         </span>
                     </div>
                 ))}
-            </Slider> */}
-           <div className='tech-stack-marque'>
+            </Slider>
+           {/* <div className='tech-stack-marque'>
                 <div className='flex flex-row gap-20'>
                      {webstack.map((tech, index) => (
                         <div key={index} className='text-center'>
@@ -62,7 +62,7 @@ function Webstack(){
                         </div>
                     ))}
                 </div>
-           </div>
+           </div> */}
         </section>
     )
 }

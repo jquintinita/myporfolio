@@ -13,8 +13,9 @@
     justify-content: center;
     gap: 12px;
     position: absolute;
-    right: 20px;
-    bottom: 20px;
+    left: 50%;
+    bottom: 80px;
+    transform: translateX(-50%);
     a{
         transition: all 200ms ease-in;
         display: block;
@@ -25,6 +26,9 @@
         &:hover{
             transform: scale(1.2);
         }
+    }
+    @media screen and (min-width: 767px){
+        bottom: 20px;
     }
 }
 
