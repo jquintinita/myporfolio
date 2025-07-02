@@ -1,12 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import '../assets/css/work-experience.scss';
-import AOS from 'aos';
-
-AOS.init({
-    useClassNames: true,
-    initClassName: false,
-    animatedClassName: 'animated',
-});
+import { useTransform, useScroll, motion, AnimatePresence } from 'framer-motion';
+import useDimension from '../useDimension';
 
 
 const skillColors = {
@@ -91,10 +86,19 @@ function WorkExperience() {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
+     const container = useRef(null)
+    const {height} = useDimension();
+    const {scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start end', 'end start']
+    })
+
+    const y = useTransform(scrollYProgress , [0,1], [0, height * 1.5]);
+
     return (
-        <div className="section work-experience px-4 md:px-5" id="work-experience">
+        <div className="section work-experience px-4 md:px-5" id="work-experience" ref={container}>
             <div className='container px-4 md:px-5'>
-                <h2 className='work-heading block text-center text-stone-900 dark:text-white text-5xl  font-bold mb-15' data-aos="fade-down"   data-aos-delay="400"
+                <h2 className='work-heading block text-center text-stone-900 dark:text-white text-5xl  font-bold mb-15' data-aos="fade-down"   data-aos-delay="300"
                         data-aos-duration="760"
                         data-aos-easing="ease-in">
                     My work experience
@@ -138,9 +142,11 @@ function WorkExperience() {
                 </div>
             
             </div>
-             <svg width="800" height="250" className='exp-text'>
-                <text x="150" y="200">EXPERIENCE</text>
-           </svg>
+             <motion.div className='exp-text' style={{y}}>
+                <svg width="800" height="250" >
+                    <text x="150" y="200">EXPERIENCE</text>
+            </svg>
+             </motion.div>
         </div>
     );
 }

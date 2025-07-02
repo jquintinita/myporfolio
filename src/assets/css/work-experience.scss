@@ -173,11 +173,14 @@
 
  .exp-text{
         position: absolute;
-        bottom: 2%;
-        right: 0;
+        bottom: 79%;
+        left: -15%;
         opacity: 0.1;
         width: 100%;
         z-index: 1;
+        svg{
+            width: 2190px;
+        }
         text{ 
             stroke:#fff;
             stroke-width: 2;

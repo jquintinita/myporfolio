@@ -8,7 +8,7 @@ import '../../assets/css/aesthetics.scss'
 
 function Casino(){
     return(
-        <div className='w-full h-full relative proj-Casino proj-tile bg-stone-650' data-aos="fade-left" data-aos-easing="ease-in"  data-aos-delay="40" >
+        <div className='w-full h-full relative proj-Casino proj-tile bg-stone-650' data-aos="fade-left" data data-aos-easing="ease-in"  data-aos-delay="40" >
             <img src={casinoImg} className='w-full  object-cover md:top-10 lg:-top-5 absolute bg-image' alt="casino" />
             <img src={ball} className='w-10 md:w-15 max-w-2xs right-40  lg:right-90 md:bottom-10 lg:bottom-15  absolute ball' alt="aesthetic"  />
             <img src={clover} className='w-10 md:w-18   max-w-2xs right-0 md:right-40 bottom-0 absolute clover' alt="aesthetic" />

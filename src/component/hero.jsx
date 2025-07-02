@@ -1,20 +1,23 @@
 import '../assets/css/hero.scss'
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-import AOS from 'aos';
-
-
-AOS.init({
-    useClassNames: true,
-    initClassName: false,
-    animatedClassName: 'animated',
-});
+import { useTransform, useScroll, motion } from 'framer-motion';
+import useDimension from '../useDimension';
 
 function Hero(){
 
     const [text, setText] = useState("");
     const fullText = "Code.Design.Flow";
 
+    const container = useRef(null)
+    const {height} = useDimension();
+    const {scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start end', 'end start']
+    })
+
+    const y = useTransform(scrollYProgress , [0,1], [0, height]);
+    const y2 = useTransform(scrollYProgress , [0,1], [0, height * 2.4]);
     useEffect(() => {
         let index = 0;
         let isDeleting = false;
@@ -46,14 +49,14 @@ function Hero(){
 
 
  return(
-    <div className="hero-section flex  flex-col justify-center">
+    <div className="hero-section flex  flex-col justify-center" ref={container}>
            <div className='container mx-auto px-4 md:px-10 lg:px-20'>
                 <div className='flex flex-col-reverse  md:flex-row space-y-4 justify-between  md:place-items-center'>
                     <div className='intro-text '>
                         <div className='text-orange-500 intro-line text-md font-medium'  data-aos="fade-up" >Meet the Developer</div>
                         <h1 className='text-stone-900 dark:text-white text-6xl lg:text-7xl xl:text-9xl font-bold' data-aos="fade-up"  data-aos-delay="10"  data-aos-duration="500" >Joseph <br/> Quintinita</h1>
-                        <h2 className='text-stone-900 dark:text-white text-2xl font-medium dynamic-text' data-aos="fade-up" data-aos-delay="15"  data-aos-duration="700" ><span id="dynamic-text">{text}</span></h2>
-                        <a href='/' className='bg-orange-500 text-white rounded-full font-medium inline-block py-4 px-9 ' data-aos="fade-up" data-aos-delay="25"  data-aos-duration="750">Download CV</a>
+                        <h2 className='text-stone-900 dark:text-white text-2xl font-medium dynamic-text' data-aos="fade-up" data-aos-offset="250"  ><span id="dynamic-text">{text}</span></h2>
+                        <a href='/' className='bg-orange-500 text-white rounded-full font-medium inline-block py-4 px-9 ' data-aos="fade-up" data-aos-offset="250"   >Download CV</a>
                     </div>
                     <div className='logo-wrapper mb-9 md:mb-0' data-aos="fade-in"
                         data-aos-offset="0"
@@ -74,17 +77,17 @@ function Hero(){
            {/* <div className='front-end-text'>
             <img src={frontendtext} alt="" />
            </div> */}
-            <div >
-                <svg width="800" height="200" className='fe-text'>
-                <text x="50" y="150">FRONTEND</text>
-           </svg>
-            </div>
+            <motion.div  style={{y: y2}} className='fe-text'>
+                <svg width="800" height="200" className='fe-text' >
+                    <text x="50" y="150">FRONTEND</text>
+                </svg>
+            </motion.div>
            
-           <div className='dev-text'>
-            <svg >
-                <text x="0" y="150">DEVELOPER</text>
-            </svg>
-           </div>
+           <motion.div style={{y}} className='dev-text'>
+                <svg >
+                    <text x="0" y="150">DEVELOPER</text>
+                </svg>
+           </motion.div>
     </div>
  )
 }

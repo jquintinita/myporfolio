@@ -22,13 +22,14 @@
 .proj-text{
         position: absolute;
         top: -80px;
+        left: 20px;
         opacity: 0.4;
         width: 100%;
         overflow: hidden;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         svg{
-           width: 1268px;
+           width: 1669px;
 
         }
         text{ 

@@ -2,15 +2,6 @@
 import '../assets/css/about.scss'
 import myPhoto from '../assets/images/myphoto-latest.png'
 import CodingText from './codingtext'
-import { motion } from 'framer-motion';
-import AOS from 'aos';
-
-
-AOS.init({
-    useClassNames: true,
-    initClassName: false,
-    animatedClassName: 'animated',
-});
 
 function About(){
 
@@ -21,8 +12,6 @@ function About(){
                 <div className='flex flex-col lg:flex-row space-x-6 justify-between place-items-center'>
                     <div className='about-me-img flex-1' >
                          <div data-aos="fade-right"
-                        data-aos-delay="10"
-                        data-aos-duration="200"
                         data-aos-easing="ease-in">
                             <img src={myPhoto} alt="" />
                         </div>

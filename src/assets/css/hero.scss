@@ -11,6 +11,7 @@
    padding: 10% 0;
    width: 100%;
    height: 100vh;
+   position: relative;
    overflow: hidden;
    .dynamic-text{
     display: inline-block;
@@ -73,11 +74,13 @@
    }
    .fe-text{
         position: absolute;
-        top: 0;
+        top: -120%;
         left: 0;
-        opacity: 0.3;
+        opacity: 0.5;
         width: 100%;
-      
+        @media screen and (min-width: 768px) {
+          top: -110%
+        }
         text{
             stroke: var(--text-orange);
             stroke-width: 2;
@@ -94,7 +97,7 @@
    }
    .dev-text{
         position: absolute;
-        bottom: 5%;
+        bottom: 604px;
         right: 0;
         opacity: 0.2;
         width: 100%;
