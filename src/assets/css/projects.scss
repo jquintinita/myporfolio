@@ -55,9 +55,10 @@
    }
 
 .proj-tile{
-    filter: grayscale(1);
+    // filter: grayscale(1);
     transition: all 600ms ease-in;
     overflow: hidden;
+    border-radius: 30px;
     position: relative;
     .overlay{
         background-color: #C85321;
