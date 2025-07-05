@@ -8,44 +8,105 @@ import Eyecare from './projects/eyecare';
 import Other from './projects/others';
 import ModalPortal from './modal-portal';
 import Lenis from 'lenis'; // Import Lenis
+import { u } from 'framer-motion/client';
 
 const projects = [
     {
-        title: 'Casino', 
-        color: 'bg-violet-500', 
-        component: Casino, 
+        title: 'Casino',
+        color: 'bg-violet-500',
+        component: Casino,
         colSpan: 'col-span-6 row-span-2 row-start-2 md:col-span-2 md:row-span-3 md:row-start-2 lg:col-span-1 lg:row-span-2 lg:col-start-2 lg:row-start-1',
         project_lst: [
             {
                 name: 'Pbc88bd.com',
+                url: 'https://pbc88bd.com',
                 image: '/images/pbcbd-site.jpg',
-                description: 'A luxury online casino with real-time gameplay.',
-                techStack: ['React', 'Tailwind', 'Socket.io']
+                description: 'A sports betting and online casino platform focused on user trust, accessibility, and onboarding. Built with WordPress and Divi Builder, featuring a live streaming page integrated via JavaScript and PHP.',
+                techStack: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'PHP']
             },
             {
                 name: 'Pbc88Affiliate.com',
+                url: 'https://pbc88affiliates.com/',
                 image: '/images/pbc88Aff.jpg',
-                description: 'Mobile-first design with rich animations.',
-                techStack: ['Vue', 'GSAP', 'Firebase']
+                description: 'The official affiliate platform for PBC88, enabling agents to earn commissions by promoting cricket betting, virtual games, slots, and live casino services.',
+                techStack: ['WordPress', 'HTML5', 'CSS', 'JavaScript', 'PHP']
+            },
+            {
+                name: 'iPlay818.net',
+                url: 'https://iplay818.net',
+                image: '/images/iplay818.jpg',
+                description: 'A responsive website for a Chinese casino platform, offering sports, poker, live casino, lotto, slots, and fishing games with interactive rewards. Built with HTML, CSS3, SCSS, and JavaScript.',
+                techStack: ['HTML5', 'CSS3', 'JavaScript', 'SCSS', 'jQuery']
+            },
+            {
+                name: 'Pbc88-live.app',
+                url: 'https://pbc88-live.app/',
+                image: '/images/pbc88-live.jpg',
+                description: 'A livestreaming platform for sports including Cricket, Football, Basketball, Tennis, and Esports. Built with ReactJS (client) and ExpressJS (server).',
+                techStack: ['ReactJS', 'HTML5', 'JavaScript', 'CSS/SCSS', 'NodeJS', 'ExpressJS', 'MySQL']
+            },
+            {
+                name: 'Hope Star',
+                url: 'https://xtu168.com',
+                image: '/images/hope-star.jpg',
+                description: 'HopeStar Technology provides comprehensive business solutions, specializing in API services and gaming platforms.',
+                techStack: ['HTML5', 'CSS3', 'JavaScript', 'SCSS', 'jQuery']
+            },
+            {
+                name: 'Max Casino',
+                url: 'https://jquintinita.github.io/index/max-casino/index.html',
+                image: '/images/max-casino.jpg',
+                description: 'A landing page promoting the Max Casino mobile gaming app, designed for visual appeal and driving downloads. Fun, flashy, and energetic style.',
+                techStack: ['HTML5', 'CSS3', 'JavaScript', 'SCSS', 'jQuery']
             }
         ]
     },
     {
-        title: 'Eyecare', 
-        color: 'bg-stone-650', 
-        component: Eyecare, 
-        colSpan: 'col-span-6 row-span-2 row-start-4 md:col-span-3 md:row-span-3 md:col-start-3 md:row-start-2 lg:col-span-2 lg:row-span-3 lg:col-start-3 lg:row-start-1'
+        title: 'Eyecare',
+        color: 'bg-stone-650',
+        component: Eyecare,
+        colSpan: 'col-span-6 row-span-2 row-start-4 md:col-span-3 md:row-span-3 md:col-start-3 md:row-start-2 lg:col-span-2 lg:row-span-3 lg:col-start-3 lg:row-start-1',
+        project_lst: [
+            {
+                name: 'Premier Eyecare Associates',
+                url: 'https://premiereyecare.biz',
+                image: '/images/premiereyecare-biz.jpg',
+                description: 'A modern, responsive WordPress website converted from Figma, featuring a user-friendly interface and optimized for all devices.',
+                techStack: ['WordPress', 'HTML5', 'JavaScript', 'CSS', 'jQuery', 'PHP']
+            },
+            {
+                name: 'Advance Eyecare Vintage Eyewear',
+                url: 'https://premiereyecare.biz',
+                image: '/images/advance-eyecare-vintage.jpg',
+                description: 'A WordPress site converted from Figma, offering a modern design, easy navigation, and mobile optimization.',
+                techStack: ['WordPress', 'HTML5', 'JavaScript', 'CSS', 'jQuery', 'PHP']
+            },
+            {
+                name: 'Somerset Eyecare',
+                url: 'https://premiereyecare.biz',
+                image: '/images/somerset-eyecare.jpg',
+                description: 'A fully functional WordPress website based on Figma design, with a focus on usability and responsive layout.',
+                techStack: ['WordPress', 'HTML5', 'JavaScript', 'CSS', 'jQuery', 'PHP']
+            },
+            {
+                name: 'University Vision Center',
+                url: 'https://premiereyecare.biz',
+                image: '/images/university-vision-ceneter.jpg',
+                description: 'A WordPress site converted from Figma, featuring a modern, responsive design and optimized navigation.',
+                techStack: ['WordPress', 'HTML5', 'JavaScript', 'CSS', 'jQuery', 'PHP']
+            }
+        ]
     },
     {
-        title: 'Aesthetic', 
-        color: 'bg-stone-650', 
-        component: Aesthetics, 
+        title: 'Aesthetic',
+        color: 'bg-stone-650',
+        component: Aesthetics,
         colSpan: 'col-span-6 row-span-2 row-start-6 md:col-span-3 md:row-span-3 md:row-start-5 lg:col-span-2 lg:row-span-3 lg:col-start-1 lg:row-start-3'
     },
     {
-        title: 'Others', 
-        color: 'bg-stone-650', 
-        component: Other, 
+        title: 'Others',
+        color: 'bg-stone-650',
+        component: Other,
         colSpan: 'col-span-6 row-span-2 row-start-8 md:col-span-2 md:row-span-3 md:col-start-4 md:row-start-5 lg:col-span-1 lg:row-span-2 lg:col-start-3 lg:row-start-4'
     }
 ];
@@ -142,7 +203,8 @@ function Project({ openModal, closeModal }) {
                                         initial={{ scale: 0.95 }}
                                         animate={{ scale: 1 }}
                                         exit={{ scale: 0.95 }}
-                                    >
+                                    >   <h2 className="text-3xl font-bold text-center mb-6">
+                                            {activeProject.title}</h2>
                                         <button
                                             onClick={() => setActiveProject(null)}
                                             className="absolute top-4 right-4 text-2xl font-bold"
@@ -151,7 +213,7 @@ function Project({ openModal, closeModal }) {
                                         </button>
                                         
                                         <div 
-                                            className="overflow-auto h-full px-8 modal-content [&::-webkit-scrollbar]:w-2
+                                            className="overflow-auto proj-items-wrapper h-[85vh] px-8 modal-content [&::-webkit-scrollbar]:w-2
                                             [&::-webkit-scrollbar-track]:rounded-full
                                             [&::-webkit-scrollbar-track]:bg-gray-100
                                             [&::-webkit-scrollbar-thumb]:rounded-full
@@ -160,21 +222,21 @@ function Project({ openModal, closeModal }) {
                                             dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500" 
                                             ref={modalContentRef} // Use the ref for modal content
                                         >
-                                            <div className="space-y-6 pt-10 flex flex-col md:grid md:grid-cols-4 gap-4 ">
+                                            <div className=" py-10 flex flex-col md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-4 gap-5 ">
                                                 {activeProject.project_lst && activeProject.project_lst.length > 0 ? (
                                                     activeProject.project_lst.map((proj, index) => (
                                                         <div key={index} className=" bg-stone-800 text-white h-full overflow-hidden rounded-2xl flex flex-col gap-4">
                                                             <img
                                                                 src={proj.image}
                                                                 alt={proj.name}
-                                                                className="w-full "
+                                                                className="w-full object-contain proj-item-img"
                                                             />
                                                             <div className="flex-1 p-5">
-                                                                <h3 className="text-2xl font-bold">{proj.name}</h3>
+                                                                <a href={proj.url} target='_blank' ><h3 className="text-2xl font-bold">{proj.name}</h3></a>
                                                                 <p className="mt-2">{proj.description}</p>
-                                                                <ul className="mt-4 list-disc pl-5 text-sm">
+                                                                <ul className="mt-4 list-none flex  flex-wrap gap-2 ml-0  text-sm">
                                                                     {proj.techStack.map((tech, i) => (
-                                                                        <li key={i}>{tech}</li>
+                                                                        <li key={i} className='border-1 py-2 px-6 rounded-3xl'>{tech}</li>
                                                                     ))}
                                                                 </ul>
                                                             </div>
