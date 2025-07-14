@@ -105,7 +105,7 @@ const MyProjects = () => {
        
       <div className="sticky top-0 h-screen overflow-hidden py-40">
          <motion.div className='proj-text z-0' style={{ x }}>
-            <svg width="2400" height="250">
+            <svg width="2800" height="250">
                 <text x="150" y="200">PROJECTS</text>
             </svg>
         </motion.div>
