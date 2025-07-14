@@ -10,26 +10,16 @@ import Lenis from 'lenis';
 import AOS from 'aos';
 import Contact from './component/contact';
 import Header from './component/header';
+import GridProject from './component/GridProject';
+import ProjectScroll from './component/myprojects';
+import MyProjects from './component/myprojects';
+import HorizontalScroll from './component/HorizontalScroll';
+
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [lenis, setLenis] = useState(null);
 
-  // Function to disable smooth scroll
-  const disableSmoothScroll = () => {
-    if (lenis) {
-      lenis.stop();
-      document.body.style.overflow = 'hidden';
-    }
-  };
-
-  // Function to enable smooth scroll
-  const enableSmoothScroll = () => {
-    if (lenis) {
-      document.body.style.overflow = '';
-      lenis.start();
-    }
-  };
 
   useEffect(() => {
     // Initialize Lenis
@@ -75,11 +65,9 @@ function App() {
             <Hero />
             <Webstack />
             <About />
-            <Project 
-              lenis={lenis} // Pass the lenis instance
-              openModal={disableSmoothScroll} 
-              closeModal={enableSmoothScroll} 
-            />
+            <MyProjects lenis={lenis} />
+        
+
             <WorkExperience />
             <Contact />
           </main>

@@ -9,12 +9,17 @@ import Other from './projects/others';
 import ModalPortal from './modal-portal';
 import Lenis from 'lenis'; // Import Lenis
 import { u } from 'framer-motion/client';
+import ChromaGrid from './ChromaGrid';
+import CasinoTitle from '../assets/images/Casino.svg'
+import aestheticTitle from '../assets/images/Aesthetics-text.svg'
+import EyecareTitle from '../assets/images/Eyecare.svg'
 
 const projects = [
     {
         title: 'Casino',
-        color: 'bg-violet-500',
-        component: Casino,
+        borderColor: "#10B981",
+        gradient: "linear-gradient(180deg, #10B981, #000)",
+        component: CasinoTitle,
         colSpan: 'col-span-6 row-span-2 row-start-2 md:col-span-2 md:row-span-3 md:row-start-2 lg:col-span-1 lg:row-span-2 lg:col-start-2 lg:row-start-1',
         project_lst: [
             {
@@ -63,8 +68,9 @@ const projects = [
     },
     {
         title: 'Eyecare',
-        color: 'bg-stone-650',
-        component: Eyecare,
+        borderColor: "#10B981",
+        gradient: "linear-gradient(210deg, #10B981, #000)",
+        component: EyecareTitle,
         colSpan: 'col-span-6 row-span-2 row-start-4 md:col-span-3 md:row-span-3 md:col-start-3 md:row-start-2 lg:col-span-2 lg:row-span-3 lg:col-start-3 lg:row-start-1',
         project_lst: [
             {
@@ -99,14 +105,16 @@ const projects = [
     },
     {
         title: 'Aesthetic',
-        color: 'bg-stone-650',
-        component: Aesthetics,
+        borderColor: "#F59E0B",
+        gradient: "linear-gradient(165deg, #F59E0B, #000)",
+        component: aestheticTitle,
         colSpan: 'col-span-6 row-span-2 row-start-6 md:col-span-3 md:row-span-3 md:row-start-5 lg:col-span-2 lg:row-span-3 lg:col-start-1 lg:row-start-3'
     },
     {
         title: 'Others',
-        color: 'bg-stone-650',
-        component: Other,
+        borderColor: "#8B5CF6",
+        gradient: "linear-gradient(225deg, #8B5CF6, #000)",
+        component: "Other",
         colSpan: 'col-span-6 row-span-2 row-start-8 md:col-span-2 md:row-span-3 md:col-start-4 md:row-start-5 lg:col-span-1 lg:row-span-2 lg:col-start-3 lg:row-start-4'
     }
 ];
@@ -169,13 +177,14 @@ function Project({ openModal, closeModal }) {
             </motion.div>
             <div className='px-2 relative z-30'>
                 <div className="relative w-full min-h-screen text-white overflow-hidden">
-                    <div className="grid grid-cols-6 grid-rows-9 md:grid-cols-5 md:grid-rows-7 lg:grid-cols-4 lg:grid-rows-5 gap-4 p-8 pt-10 pb-10 lg:pt-30 lg:pb-20 h-[100vh] md:h-[90vh]">
+                    {/* <div className="grid grid-cols-6 grid-rows-9 md:grid-cols-5 md:grid-rows-7 lg:grid-cols-4 lg:grid-rows-5 gap-4 p-8 pt-10 pb-10 lg:pt-30 lg:pb-20 h-[100vh] md:h-[90vh]">
                         <div className='col-span-6 lg:col-span-1 lg:row-span-2 lg:col-start-1 lg:row-start-1 flex h-full place-items-center justify-center'>
                             <h2 className='proj-heading block text-center text-stone-900 dark:text-white text-4xl md:text-5xl font-bold lg:mb-15' data-aos="fade-down">
                                 My Projects
                             </h2>
                         </div>
                         {projects.map((project, index) => (
+                            <>
                             <motion.div
                                 key={index}
                                 layout
@@ -186,8 +195,16 @@ function Project({ openModal, closeModal }) {
                             >
                                 {React.createElement(project.component)}
                             </motion.div>
+                            </>
+                            
                         ))}
-                    </div>
+                    </div> */}
+
+                    <ChromaGrid  items={projects}
+                            radius={300}
+                            damping={0.45}
+                            fadeOut={0.6}
+                            ease="power3.out"></ChromaGrid>
 
                     <AnimatePresence>
                         {activeProject && (
