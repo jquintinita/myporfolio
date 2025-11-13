@@ -14,21 +14,21 @@ const projectLst = [
     },
     {
         name: 'Advance Eyecare Vintage Eyewear',
-        url: 'https://premiereyecare.biz',
+        url: 'https://myadvancedeyecare.com/',
         image: '/images/advance-eyecare-vintage.jpg',
         description: 'A WordPress site converted from Figma, offering a modern design, easy navigation, and mobile optimization.',
         techStack: ['WordPress', 'HTML5', 'JavaScript', 'CSS', 'jQuery', 'PHP']
     },
     {
         name: 'Somerset Eyecare',
-        url: 'https://premiereyecare.biz',
+        url: 'https://somerseteyecare.com/',
         image: '/images/somerset-eyecare.jpg',
         description: 'A fully functional WordPress website based on Figma design, with a focus on usability and responsive layout.',
         techStack: ['WordPress', 'HTML5', 'JavaScript', 'CSS', 'jQuery', 'PHP']
     },
     {
         name: 'University Vision Center',
-        url: 'https://premiereyecare.biz',
+        url: 'https://universityvisioncentre.com/',
         image: '/images/university-vision-ceneter.jpg',
         description: 'A WordPress site converted from Figma, featuring a modern, responsive design and optimized navigation.',
         techStack: ['WordPress', 'HTML5', 'JavaScript', 'CSS', 'jQuery', 'PHP']
