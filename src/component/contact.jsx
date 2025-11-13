@@ -5,7 +5,7 @@ function Contact(){
             <div className='max-w-[1000px] download-cv relative z-30'>
                 <h2 data-aos="fade-left"  data-aos-delay="400"  data-aos-duration="500"  className='text-3xl md:text-4xl lg:text-8xl mt-10 md:mt-0 font-bold mb-8 text-white '>Looking for a driven and dedicated professional?</h2>
                 <p data-aos="fade-left" data-aos-delay="450" data-aos-duration="500"  className='text-white text-lg'>Download my CV to learn more about my skills, experience, and accomplishments. I'm excited to bring my expertise to your team and help achieve your goals.</p>
-                <a href='/assets/Joseph Quintinita-CV.docx' target='_blank' className='bg-orange-500 text-white rounded-full font-medium inline-block py-4 px-9 mt-5 ' data-aos="fade-up"  data-aos-delay="500"   >Download CV</a>
+                <a href='/Joseph-Quintinita-CV.docx' target='_blank' className='bg-orange-500 text-white rounded-full font-medium inline-block py-4 px-9 mt-5 ' data-aos="fade-up"  data-aos-delay="500"   >Download CV</a>
             </div>
             <div className='w-[150px] right-30 top-100 md:w-[250px] lg:w-[400px] absolute lg:right-30 lg:top-40 z-0 opacity-10' data-aos="fade-up"  data-aos-delay="400"  data-aos-duration="500" >
                 <svg className="draw w-full h-auto" width="342" height="398" viewBox="0 0 342 398" fill="none" xmlns="http://www.w3.org/2000/svg">

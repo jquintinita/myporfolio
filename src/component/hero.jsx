@@ -60,7 +60,7 @@ function Hero(){
                         <div className='text-orange-500 intro-line text-md font-medium'  data-aos="fade-up" >Meet the Developer</div>
                         <h1 className='text-stone-900 dark:text-white text-6xl lg:text-7xl xl:text-9xl font-bold' data-aos="fade-up"  data-aos-delay="10"  data-aos-duration="500" >Joseph <br/> Quintinita</h1>
                         <h2 className='text-stone-900 dark:text-white text-2xl font-medium dynamic-text' data-aos="fade-up" data-aos-delay="250"   ><span id="dynamic-text">{text}</span></h2>
-                        <a href='https://drive.google.com/file/d/1pDJ3fQArfa181ysGv1KcQzKFcWfyACOK/view?usp=sharing' target='_blank' className='bg-orange-500 text-white rounded-full font-medium inline-block py-4 px-9 ' data-aos="fade-up" data-aos-delay="250"   >Download CV</a>
+                        <a href='/Joseph-Quintinita-CV.docx' target='_blank' className='bg-orange-500 text-white rounded-full font-medium inline-block py-4 px-9 ' data-aos="fade-up" data-aos-delay="250"   >Download CV</a>
                     </div>
                     <div  className='logo-wrapper z-50 mb-9 md:mb-0' data-aos="zoom-in"
                         data-aos-offset="0"
