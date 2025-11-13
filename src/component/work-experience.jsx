@@ -42,8 +42,8 @@ function WorkExperience() {
         },
         {
             dates: "Nov 2020 – Oct 2022",
-            title: "Senior Website Developer",
-            company: "National Strategic Group | Remote",
+            title: "Wordpress Developer",
+            company: "Freelance | Wordpress Developer",
             details: "Skilled in transforming PSD designs into fully responsive WordPress websites, I specialize in bringing visual concepts to life with clean, functional code. I create custom features and plugins to match unique design specifications and ensure websites are optimized with compressed images for improved performance. I also assist with regular website updates and deliver mobile-friendly sites that adapt seamlessly across devices. With hands-on experience using popular website builders like DIVI, Elementor, and WP Bakery, I can efficiently build and manage sites tailored to various client needs.",
             skills: ["WordPress", "HTML5", "CSS3", "Javascript", "jQuery", "Shopify", "Adobe Photoshop"]
         },
